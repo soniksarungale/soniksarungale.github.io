@@ -413,10 +413,21 @@ ul.skills-list li::before {
     .navigation{
         display: none;
     }
+    #home header .logo{
+        display: none;
+    }
+    #home header .mob-logo h1{
+        font-size: 18px;
+        margin: 0px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+    }
     #home header{
         padding: 0px;
-        height: 70px;
+        height: 50px;
         justify-content: center;
+        line-height: 50px;
     }
     .homecontent-text h4{
         font-size: 20px;
