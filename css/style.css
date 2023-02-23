@@ -14,11 +14,9 @@ html,body{
 #home header{
     width: 100%;
     height: 100px;
-    height: 100px;
     line-height: 60px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     margin: 0px auto;
     padding: 20px 50px;
 /*    max-width: 1250px;*/
@@ -167,12 +165,8 @@ html,body{
     left: 30px;
 }
 
-#about p.about{
-	margin-top: 70px;
-	padding: 35px;
-	line-height: 30px;
-	font-size: 18px;
-	letter-spacing: 2px;
+#about .about p{
+	font-size: 16px;
 }
 ul.skills-list {
     display: grid;
@@ -202,6 +196,9 @@ ul.skills-list li::before {
 }
 .work-img-holder{
     padding: 5px 0px;
+}
+.projectbasetxt{
+    font-size: 15px;
 }
 #work .work-img-holder .row{
 	display: flex;
@@ -405,4 +402,103 @@ ul.skills-list li::before {
 .contactemail{
     padding-bottom: 20px;
     margin-bottom: 10px;
+}
+.show-mob{
+    display: none;
+}
+.section-headline h2{
+    font-size: 24px;
+}
+@media only screen and (max-width: 760px){
+    .navigation{
+        display: none;
+    }
+    #home header{
+        padding: 0px;
+        height: 70px;
+        justify-content: center;
+    }
+    .homecontent-text h4{
+        font-size: 20px;
+    }
+    .homeholder{
+        padding: 0px 15px;
+    }
+    .homecontent-headline h2{
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .homecontent-text p{
+        font-size: 12px;
+        line-height: 17px;
+        padding: 0px 20px;
+        margin-top: 5px;
+    }
+    .hide-mob{
+        display: none;
+    }
+    .show-mob{
+        display: block;
+    }
+    #about .content-lhs{
+        width: 100%;
+    }
+    .relholder{
+        display: block;
+    }
+    .about-mob-icon{
+        text-align: center;
+    }
+    .about-mob-icon img{
+        width: 60%;
+
+    }
+    #about .about p{
+        font-size: 14px;
+        text-align: center;
+    }
+    ul.skills-list{
+        grid-template-columns: repeat(3, minmax(80px, 200px));
+    }
+    ul.skills-list li{
+        font-size: 10px;
+        margin-bottom: 7px;
+
+    }
+    
+    .section-headline h2{
+        font-size: 18px;
+    }
+    #work{
+        padding-top: 20px;
+    }
+    .projectbasetxt{
+        font-size: 12px;
+    }
+    .container{
+        margin: 25px auto;
+    }
+    #work .work-img-holder .row{
+        display: block;
+    }
+    #work .work-img-holder .work-img{
+        width: 100%;
+        margin: 20px 0px;
+    }
+    #work .work-img-holder .work-img .text{
+        padding: 0px 20px;
+    }
+    #contact .contacthead{
+        font-size: 22px;
+    }
+    #contact .para{
+        font-size: 12px;
+        margin: 10px auto;
+    }
+    #contact .hellobtn{
+        padding: 0 17px;
+        font-size: 14px;
+        height: 36px;
+        line-height: 32px;
+    }
 }
