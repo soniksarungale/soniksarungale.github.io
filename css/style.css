@@ -294,7 +294,6 @@ ul.skills-list li::before {
     font-size: 14px;
     position: relative;
     z-index: 2;
-    color: #008bff;
     letter-spacing: .2px;
     text-transform: uppercase;
     border-color: hsla(0,0%,100%,.3);
@@ -311,3 +310,39 @@ ul.skills-list li::before {
     transform: translateY(-3px);
 
 }
+.center-align{
+    text-align: center;
+}
+.archiveholder{
+    text-align: center;
+    margin: 20px 0px;
+}
+.archiveholder a{
+    
+display: inline-block;
+text-decoration: none;
+text-decoration-skip-ink: auto;
+position: relative;
+transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+color: #682ae9;
+
+visibility: visible;
+opacity: 1;
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+.archiveholder a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color:#682ae9;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+    bottom: 0.0em;
+  }
+  .archiveholder a:hover::after, .archiveholder a:focus::after, .archiveholder a:active::after {
+    width: 100%;
+  }
