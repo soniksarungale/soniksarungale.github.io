@@ -1,0 +1,39 @@
+<div class="body">
+    <div class="layer">
+        <div class="form">
+            <div class="login-form">
+                <div class="heading">Login to your <b>Account</b></div>
+                <div class="input-box">
+                    <form action="" method="post" onsubmit="checkValication(event)">
+                        <span class="error-message" data-render>{{email_message}}</span>
+                        <input type="text" class="input" id="email_field" placeholder="Your Email address...">
+                        <span class="error-message" data-render>{{password_message}}</span>
+                        <input type="password" class="input" id="pass_field" placeholder="Your Password...">
+                        <input type="submit" class="submit" value="login">
+                    </form>
+                </div>
+                <br>
+                Don't have account? <a href="/signin" class="async-link togglebtn">Create Account</a> Now. 
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    dataStore.setData({
+        email_message:"",
+        password_message: "",
+    });
+    function checkValication(event) {
+        event.preventDefault();
+        let email_message = "";
+        if(document.querySelector("#email_field").value.length === 0){
+            email_message = "Email is required";
+        }
+        let password_message = "";
+        if(document.querySelector("#pass_field").value.length === 0){
+            password_message = "Password is required";
+        }
+        dataStore.update('email_message', email_message);
+        dataStore.update('password_message', password_message);
+    }
+</script>

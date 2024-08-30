@@ -1,0 +1,50 @@
+<div class="body">
+    <div class="layer">
+        <div class="form">
+            <div class="signup-form">
+                <div class="heading">Create your <b>Account</b></div>
+                <div class="input-box">
+                    <form action="" method="post" onsubmit="checkValication(event)">
+                        <span class="error-message" data-render>{{email_message}}</span>
+                        <input type="text" class="input" id="email_field" placeholder="New Email address...">
+                        <span class="error-message" data-render>{{password_message}}</span>
+                        <input type="password" class="input" id="pass_field" placeholder="New password...">
+                        <span class="error-message" data-render>
+                            {{#if (pass_text != repass_text)}}
+                                Password should match
+                            {{/if}}
+                        </span>
+                        <input type="password" class="input" id="repass_field" placeholder="Repeat New password...">
+                        <input type="submit" class="submit" value="Create account">
+                    </form>
+                </div>
+                <br>
+                Already an member ? <a href="/login" class="async-link togglebtn">Login</button> Now.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    dataStore.setData({
+        email_message:"",
+        password_message: "",
+        pass_text: "",
+        repass_text: "",
+    });
+    function checkValication(event) {
+        event.preventDefault();
+        let email_message = "";
+        if(document.querySelector("#email_field").value.length === 0){
+            email_message = "Email is required";
+        }
+        let password_message = "";
+        if(document.querySelector("#pass_field").value.length === 0){
+            password_message = "Password is required";
+        }
+        dataStore.update('pass_text', document.querySelector("#pass_field").value);
+        dataStore.update('repass_text', document.querySelector("#repass_field").value);
+
+        dataStore.update('email_message', email_message);
+        dataStore.update('password_message', password_message);
+    }
+</script>
